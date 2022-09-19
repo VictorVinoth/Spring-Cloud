@@ -1,0 +1,5 @@
+
+server.port=9001
+spring.application.name=PRODUCTS-CLIENT-SERVICE
+spring.cloud.config.uri=http://localhost:8889
+spring.config.import=configserver:http://localhost:8889

@@ -1,0 +1,5 @@
+package com.javatechie.products.api;
+
+public class ProductsController {
+
+}

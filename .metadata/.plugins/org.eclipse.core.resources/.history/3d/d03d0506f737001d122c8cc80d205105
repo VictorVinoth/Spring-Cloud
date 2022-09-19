@@ -1,0 +1,40 @@
+package com.javatechie.products.client.api;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class ProductsClientApplication {
+
+	@Autowired
+	private RestTemplate template;
+	
+	@Value("${products.service.url}")
+	private String productsURL;
+	
+	
+	@GetMapping("/products")
+	public List<String> getProducts() {
+		System.out.println("Entered into ShoppingController - Products service");
+		return template.getForObject(productsURL, List.class);
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(ProductsClientApplication.class, args);
+	}
+
+	
+	@Bean
+	@LoadBalanced
+	public RestTemplate template() {
+		return new RestTemplate();
+	}
+}

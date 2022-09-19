@@ -1,0 +1,14 @@
+package com.javatechie.shopping.api;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ShoppingController {
+	
+	public String processPayment(@PathVariable int amount) {
+		return"";
+		
+	}
+
+}

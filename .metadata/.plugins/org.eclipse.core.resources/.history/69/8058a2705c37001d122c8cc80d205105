@@ -1,0 +1,13 @@
+package com.javatechie.shopping.config.server.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ShoppingConfigServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ShoppingConfigServerApplication.class, args);
+	}
+
+}

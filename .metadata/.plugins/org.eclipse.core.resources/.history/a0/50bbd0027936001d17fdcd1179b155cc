@@ -1,0 +1,4 @@
+server.port=9999
+spring.application.name=SHOPPING-SERVICE
+eureka.client.fetch-registry=true
+eureka.client.register-with-eureka=true

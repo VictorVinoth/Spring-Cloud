@@ -1,0 +1,14 @@
+package com.javatechie.products.api;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductsController {
+	
+	public List<String> getAllProducts(){
+		return Stream.of("","");
+	}
+
+}
